@@ -1,0 +1,17 @@
+body{
+   background-image: url(./85327.png);
+color: brown;
+}
+
+    .row {
+        display: flex;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-top: 10%;
+    }
+    .container {
+        display: flex;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: auto;
+    }
