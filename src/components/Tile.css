@@ -1,0 +1,56 @@
+.tile {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  color: hsl(var(--tile-hue), 80%, 78%);
+  background:
+    radial-gradient(circle at 30% 20%, hsla(var(--tile-hue), 80%, 60%, 0.28), transparent 46%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.18));
+  border: 1px solid hsla(var(--tile-hue), 70%, 70%, 0.35);
+  border-radius: 22px;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.tile:hover:not(:disabled),
+.tile:focus-visible {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 16px 30px hsla(var(--tile-hue), 80%, 40%, 0.22);
+  border-color: hsl(var(--tile-hue), 80%, 72%);
+  outline: none;
+}
+
+.tile:active:not(:disabled) {
+  transform: translateY(0) scale(0.98);
+}
+
+.tile:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.tile-art {
+  width: 58%;
+  display: block;
+}
+
+.tile-art svg {
+  width: 100%;
+  height: auto;
+}
+
+.tile-name {
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile {
+    transition: none;
+  }
+}
