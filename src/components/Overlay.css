@@ -1,0 +1,58 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(8, 10, 14, 0.72);
+  z-index: 10;
+}
+
+.overlay-card {
+  width: min(420px, 100%);
+  padding: 28px 24px;
+  border-radius: 24px;
+  background: #1b222c;
+  border: 1px solid rgba(126, 240, 208, 0.24);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.overlay-kicker {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  color: var(--accent);
+}
+
+.overlay-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.7rem;
+}
+
+.overlay-card p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+.overlay-scores {
+  color: var(--accent-2) !important;
+}
+
+.overlay-btn {
+  margin-top: 8px;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #102018;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.overlay-btn:focus-visible,
+.overlay-btn:hover {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+}
